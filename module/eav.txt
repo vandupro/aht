@@ -1,0 +1,25 @@
+	EAV trong magento2
+
+ + Entity: bao gồm thông tin cho loại data cho cửa hàng: customer, product....
+ + Attribute: properties của 1 entity (color, size, height)
+ + Value: giá trị của attribute trên ( red, blue )
+ 
+ => chia data thành nhiều bảng khác nhau tương ứng với loại thuộc tính
+ 
+ + 3 bảng chính:
+  - entity, attribute, value
+  
+  - khi lưu dữ liệu tương tứng với mỗi store thì chỉ cần thêm store_id vào bảng data attribute
+ 
+ + so sánh giữa flat table và eav table:
+  - trong flat table attributes value và entity được lưu trên cùng 1 bảng. 1 cột mới của table sẽ được thêm cho mỗi attribute
+  - trong eav model: giá trị attributes được lưu trong 1 bảng cụ thể, 1 new row được thêm vào sẽ đại diên cho value của mỗi attribute của entity.
+  
+  https://github.com/thanhnguyenbss/bss-new-entity-m2/blob/master/Setup/InstallSchema.php
+  
+  https://bsscommerce.com/confluence/magento-2-eav-model-things-you-may-not-know/
+  
+  php bin/magento setup:db-declaration:generate-whitelist --module-name=AHT_Salesagents
+  
+  https://devdocs.magento.com/guides/v2.4/ui_comp_guide/concepts/ui_comp_config_flow_concept.html
+

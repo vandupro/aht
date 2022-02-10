@@ -1,0 +1,48 @@
+Cấu trúc magento 2:
+
+- file di.xml: file cấu hình hướng dẫn cho object manager nó làm việc được
+- ví dụ:
+ có 3 lớp A, B, C: trong đó 
+ 	trong constructor của lớp a chứa 2 đối số: là đối tượng B, C
+ 	=> để khởi tạo đối tượng của lớp A thì oBject manager làm ntn?
+ 
+ 	+ Đầu tiên nó sẽ đi tạo 2 đối tượng B, C ( nếu chưa có), để tạo được thì nó sẽ đi lấy thông tin từ file di.xml của hệ thống
+ 	+ sau khí có 2 đối tượng B, C thì object manager sẽ truyền chúng vào constructor của lớp A. => khởi tạo ra đối tượng của lớp A.
+- DI: có 2 loại
+ + Tiêm được (các services)
+ + Không tiêm được (vd: các đối tượng model) => để tiêm được nó phải dùng factory
+ 
+- Vị trí của di.xml:
+ + trong app/etc/di.xml 
+ + trong moduleDir/etc/di.xml => phục vụ riêng chó module
+ + trong moduleDir/etc/area/di.xml
+ 
+- Nội dung bên trong di.xml
+ + node <preference>: trong for="": là 1 interface/class, trong type="" là 1 class thay thế cho interface đó. mang tính toàn cục
+  => nếu muốn thay class bên phải bằng 1 class riêng thì ở module của bạn tào file di.xml và gọi đến <preference> ở trên điền class của bạn vào., 
+  	để xét sự ưu tiên thì phải dùng <sequence>
+  	
+ + node <type>: hướng dẫn cho object manager đi tạo đối tượng cho 1 lớp như thế nào ( khởi tạo giá trị ban đầu cho nó )
+  vd: <type name="Magento\Store\Model\Store">
+        <arguments>
+            <argument name="currencyInstalled" xsi:type="string">system/currency/installed</argument>
+        </arguments>
+    </type>
+    
+    + giải thích: nó sẽ tạo ra 1 đối tượng của lớp store, và truyền vào constructor 1 biến: currencyInstalled, giá trị bằng system/currency/installed
+     có thể trong constructor của class store có nhiều đối số, nhưng có thể nó null or mình chỉ cần khai báo những thứ mình cần thôi.
+     note: name phải chính xác so với trong constructor của class
+ + node: <virtualType>: nó không phải class thực tế, được sinh ra base on class đã có: nghĩa là nó extend từ lớp gốc, và phát triển thêm các feature riêng của nó.
+ 
+ vd cho plugin: 
+ 	<type name="Magento\Customer\Model\ResourceModel\Visitor">
+        	<plugin name="catalogLog" type="Magento\Catalog\Model\Plugin\Log" />
+    	</type>
+    	
+    	+ giải thích: chúng ta sẽ viết 1 plugin có tên là catalogLog để sửa lại 1 function bên trong class visitor, cái type="" ở dưới thì là đường dẫn đến file plugin của mình custom
+    	
+    	
+    	
+     
+    
+    

@@ -1,0 +1,13 @@
+Chuan magento theme:
+
+- khi ke thua tu mot theme default, nen extend default styles thay vi overriding theme. bat cu khi nao co the, dat code custome
+cua ban ben trong _extend.less or _theme.less file thay vi overriding 1 file .less file tu parent theme.
+- customize or tao moi, chon .xml layout file thay vi custom va overriding .phtml templates. vi du, neu ban muon tao mot container
+se tot hon khi tao 1 .xml file thay vi overriding 1 template da ton tai.
+
++ thay doi vi tri cua block or container su dung: <move>
++ them hoac xoa block or container bang cach su dung remove or display attribute (true, false) ben trong <referenceBlock> /
+<referenceContainer>
++ thay doi html tag or css class cho container ton tai su dung <referenceContainer> element
++ them font, images, js files vao <theme_dir>/web/directory
+

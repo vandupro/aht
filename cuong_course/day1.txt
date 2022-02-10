@@ -1,0 +1,7 @@
+- php bin/magento setup:upgrade
+
+- php bin/magento module:status
+
+- php bin/magento module:enable module_name
+
+- php bin/magneto module:disable module_name

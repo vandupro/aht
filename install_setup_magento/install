@@ -1,0 +1,48 @@
+Cai dạt magento:
+composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition=2.3.5-p1 magento3
+
+Khi gap error:
+[Composer\Downloader\TransportException]                                     
+
+The "https://repo.packagist.org/packages.json" file could not be downloaded
+
+
+
+Lúc cài đặt magento bằng composer
+
+
+
+Chạy 3 lệnh để disable ipv6
+
+
+
+sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
+
+sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
+
+sudo sysctl -w net.ipv6.conf.lo.disable_ipv6=1
+
+
+
+Rồi thực hiện lệnh lại lệnh cài đặt magento
+
+php bin/magento setup:install \
+--base-url=http://127.0.0.1/magento4 \
+--db-host=127.0.0.1 \
+--db-name=magento4 \
+--db-user=root \
+--db-password=dutiensinh \
+--admin-firstname=admin \
+--admin-lastname=admin \
+--admin-email=dunv040995@gmail.com \
+--admin-user=admin \
+--admin-password=dutiensinh1995 \
+--language=en_US \
+--currency=USD \
+--timezone=America/Chicago \
+--use-rewrites=1
+
+sample data:
+bin/magento sampledata:deploy
+bin/magento setup:upgrade
+/admin_29ill7

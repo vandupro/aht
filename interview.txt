@@ -1,0 +1,16 @@
+1. file log nằm ở đâu
+2. Sự khác biệt developer mode và ...
+3. Có biết về design pattern không
+4. oop là gì?
+5. Tính đóng gói là gì?
+6. Tính trừu tượng là gì?
+7. Phân biệt abstract và interface, khi nào dùng
+8. Định nghĩa Dependency injection
+9. Object manager là gì?
+10. Khi viết module mới, muốn can thiệp vào function thì dùng gì?
+11. Các loại plugin, phân biệt 
+12. Hiểu gì về eav?
+13. Eav nào tạo được trong admin, loại nào không tạo được trong admin?
+14. Có bao nhiêu cách cài extension vào magento
+15. Khác biệt apache và nginx
+16. Các câu hỏi về server

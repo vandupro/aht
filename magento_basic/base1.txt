@@ -1,0 +1,83 @@
+1. Store:
+- 1 website can have multiple stores
+- website la mot tap cac trang thong tin chua noi dung dang van ban, chu so, am thanh, hinh anh, video ... duoc luu tru tren may chu va co the truy cap tu xa thong qua mang internet
+- each store have own main menu, the stores share only category, but it has multiple chooses and
+different designs.
+- all stores have same administrator.
+- cac scope:
+	global: cac tai nguyen va cai dat toan he thong co san trong suot qua tinh cai dat
+	website: cac cai dat va tai nguyen bi gioi han doi voi website hien tai. moi website co mot store mac dinh
+	store: cac cai dat va tai nguyen bi gioi han doi voi store hien tai, moi store co mot main menu mac dinh va store view mac dinh
+	store view: cac cai dat va tai nguyen duoc gioi han doi voi store view hien tai
+	
+	
+2. Store view
+- It is display of store for user outside website
+- One store can have multiple store views for each condition.
+
+3. Categories
+- when store is created, allow to choose its category.
+- when categories are created, we can choose for it: products, design, ...
+- 2 loai: 
+	root category: main menu, chua nhieu subcategory
+	subcategory: menu con
+- cac phan config khi create: 
+	name: ten category
+	content: image, desc, cms block
+	display: display mode, anchor,...
+	search engine optimization: url key, meta title, meta words, meta desc
+	products in category
+	schedule design update
+	
+	
+4. Attributes:
+- they are properties of products, it describel those products.
+- to create attributes for product:
+	stores => product => new product attribute....
+5. Products
+- 6 loai: simple product, configurable product, grouped product, virtual product, bundle product, downloadable product.
+- related products: san pham lie nquan duoc hien thi trong san pham chi tiet
+- up-sell: la san pham duoc goi y them cho khach hang, duoc hien thi trong detail
+- cross-sell: la san pham lien quan hien thi trong trang chi tiet gio hang
+- Simple Product: san pham don gian, it tuy chon, 
+
+- Configurable product: san pham cau hinh, bao gom nhieu san pham don gian, di kem voi cac bien the khac nhau. co tuy chon thuoc tinh cho khach hang lua chon, 1 bien the la 1 san pham rieng biet
+
+7. widget: la 1 doan code giup ban co the hien thi nhieu loai noi dung va dinh vi no bat cu noi nao tren store cua ban
+-chung cho phep admin them cac giao dien va tinh nang tren giao dien nguoi dung ma khong can biet ve lap trinh
+-no thuong goi la cac block dong
+
+8. block: hien thi thong tin co dinh nhu van ban, hinh anh, video, co the su dung nhieu lan, bat cu dau tren store
+
+9> catelog price rule: giam gia ma khong can coupon
+- duoc su dung de cung cap san pham cho nguoi mua vs gia triet khau
+- khong su dung coupon code vi no duoc ap dung trc khi them san pham vao gio hang
+
+10. cart price rules
+- triet khau san pham trong gio hang
+- no coupon or coupon
+
+12. order workflow
+- tao don hang => qua trinh thanh toan => nhan duoc tien thanh toan => tao hoa don => dan giao hang => hoan thanh
+- 3 trang thai cua order: cho xu ly, xu ly, hoan thanh, ngoaif ra con
+	hold: tam giu lai hoa don de xu ly sau
+	reorder: dat lai don hang 1 lan nua
+	cancel: huy don hang
+
+13. payment method:
+- cac method:
+	zero subtotal checkout: tong thanh toan bang 0 khi nhan hang
+	check/ money order: ngan phieu, sec chuyen tien
+	bank transfer payment: thanh toan qua tk ngan hang
+	cash on delivery payment: thay toan khi nhan hang
+	purchase order: don hang tao bang hop dong
+
+14. tax
+-tao tax rate => tao tax rule => config
+
+15. shipping method
+- 4 methods:
+	flat rate: chi phi co dinh, duoc xac dinh truoc
+	fee shipping: free ship
+	table rate: bang gia van chuyen, phuong phap tinh ship fee dua tren file
+	in-store delivery: giao hang tai cua hang

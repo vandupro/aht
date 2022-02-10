@@ -1,0 +1,27 @@
+ 1. Cấu trúc thư mục trong magento 2
+  + bin: Chạy các lệnh CLI
+  + generated: magento sinh code khi chay lenh setup:di:compile
+  + lib: thu muc chua cac thu vien
+  + pub: thu muc public, cho phep truy cap cac file tu ben ngoai, chua ma html, css, js, index.php
+  + var: chua cac cai tam thoi khi ung dung chay: cache, log, view_preprocessed( chua cac file less, phtml, duoc sinh ra khi chay lenh setup:static-content:delog -f
+  
+ 2. Cau truc luong hoat dong trong magento 2
+ - luong checkout 
+ - add step checkout
+ - cancer order
+ - api
+ 
+ 
+ 
+ Mong muốn từ phía CO-WELL:
+Các bạn được training kỹ hơn ở các mục sau:
+
++ Chức năng import, export
+
++ Command, cron
+
++ UI component
+
++ kỹ năng Debug với Magento 2
+
++ Architech: Cần sâu hơn về router, để có thể xác định được các file thực thi tương ứng với router

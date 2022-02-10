@@ -1,0 +1,19 @@
+1. plugin: hay la interceptor, là một class mà dùng để sửa lại hành vi của class public bằng
+cách chặn lại việc gọi function này bằng những đoạn code trước, sau, hay cả trước và sau.
+
+- có 3 loại: before, after, around
+
+- plugins không thể sử dụng với bất kỳ : final methods, final classes, static methods, 
+construct, virtual types, những object được khởi tạo trước interception bootstrapped,
+những object không được khởi tạo bởi objectmanager (bằng cách sử dụng trc tiếp new) 
+
+
+
+
+events: working with events and observers is one of the main ways to extend magento functionality
+
+- creatting new events: custom events can be dispatched by simply passing in a unique event name to the
+ vent manager when you call the dispatch function. your unique event name is referenced in your module's
+ events.xml file where you specify which observers will react to that event.
+ 
+ - 
